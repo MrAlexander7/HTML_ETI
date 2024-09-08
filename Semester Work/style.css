@@ -1,0 +1,176 @@
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Навігаційне меню */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    color: #fff;
+}
+
+.navbar a:last-child {
+    float: right;
+}
+
+/* Основний контент */
+.Main {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Main h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #555;
+}
+
+.Main p {
+    text-align: justify;
+}
+
+/* Секція "Каталог" */
+.Catalog {
+    padding: 20px;
+    background-color: #e7e7e7;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Catalog h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.Catalog ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.Catalog ul li {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Catalog ul li img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.Catalog ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.Catalog ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Футер */
+.footer {
+    background-color: #333;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Стилі для форми входу */
+.Login {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.Login h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.Login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Login label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+    text-align: left;
+    width: 100%;
+}
+
+.Login input[type="text"],
+.Login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.Login input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Login input[type="submit"]:hover {
+    background-color: #555;
+}
