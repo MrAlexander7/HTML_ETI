@@ -1,180 +1,205 @@
-/* Загальні стилі */
+/* Основні стилі */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+    background-color: #1b1b1b;
+    color: #eaeaea;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1, h2 {
-    color: #333;
+    color: #eaeaea;
 }
 
-header, footer, main, section, article, aside {
-    display: block;
+p {
+    line-height: 1.6;
 }
 
-/* Навігаційне меню */
-.navbar {
-    background-color: #333;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar a {
-    float: left;
-    display: block;
-    color: #f4f4f4;
-    text-align: center;
-    padding: 14px 20px;
+a {
+    color: #61afef;
     text-decoration: none;
 }
 
-.navbar a:hover {
-    background-color: #575757;
-    color: #fff;
+a:hover {
+    color: #98c379;
 }
 
-.navbar a:last-child {
-    float: right;
+/* Навігація */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #282c34;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.navbar a {
+    display: inline-block;
+    padding: 15px 20px;
+    color: #eaeaea;
+    font-weight: bold;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #98c379;
+    color: #1b1b1b;
 }
 
 /* Основний контент */
-main {
-    padding: 20px;
-    background-color: #fff;
-    margin: 20px auto;
-    max-width: 800px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.Main {
+    padding: 100px 20px 40px 20px; /* Відступ зверху для фіксованого меню */
+    background-color: #1e1e1e;
+    max-width: 1200px;
+    margin: auto;
 }
 
-main h1 {
+.Main h1 {
+    font-size: 36px;
     text-align: center;
-    font-size: 28px;
-    color: #555;
 }
 
-main p {
+.Main p {
     text-align: justify;
+    margin-bottom: 20px;
 }
 
-/* Секція "Каталог" */
+/* Каталог */
 .Catalog {
-    padding: 20px;
-    background-color: #e7e7e7;
-    margin: 20px auto;
-    max-width: 800px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    background-color: #222;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .Catalog h2 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #61afef;
 }
 
 .Catalog ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     list-style-type: none;
     padding: 0;
 }
 
 .Catalog ul li {
-    background-color: #fff;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background-color: #333;
+    margin: 10px;
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+.Catalog ul li:hover {
+    transform: scale(1.05);
 }
 
 .Catalog ul li img {
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: auto;
     border-radius: 4px;
+    margin-bottom: 10px;
 }
 
-.Catalog ul li a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.Catalog ul li a:hover {
-    text-decoration: underline;
+/* Вітальний банер */
+.banner {
+    background-color: #282c34;
+    color: #61afef;
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 24px;
+    margin-bottom: 40px;
+    border-bottom: 5px solid #98c379;
 }
 
 /* Футер */
-footer {
-    background-color: #333;
-    color: #f4f4f4;
+.footer {
+    background-color: #282c34;
+    color: #eaeaea;
     text-align: center;
     padding: 10px;
-    margin-top: 20px;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
 }
 
-footer p {
-    margin: 0;
+/* Адаптивність */
+@media screen and (max-width: 768px) {
+    .Main h1 {
+        font-size: 28px;
+    }
+
+    .Catalog ul {
+        flex-direction: column;
+    }
+
+    .Catalog ul li {
+        width: 100%;
+    }
+
+    .navbar a {
+        padding: 10px;
+    }
+
+    .banner {
+        font-size: 20px;
+        padding: 40px 20px;
+    }
 }
 
-/* Стилі для форми входу */
-.Login {
-    padding: 20px;
-    background-color: #fff;
-    margin: 20px auto;
-    max-width: 400px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
-}
-
-.Login h1 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
+/* Логін сторінка */
 .Login form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .Login label {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 8px;
-    text-align: left;
-    width: 100%;
+    color: #98c379;
+    margin-bottom: 10px;
 }
 
 .Login input[type="text"],
 .Login input[type="password"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: #eaeaea;
+    border: none;
     border-radius: 4px;
-    font-size: 16px;
-    box-sizing: border-box;
 }
 
 .Login input[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #333;
-    color: #fff;
+    background-color: #98c379;
+    color: #1b1b1b;
+    font-weight: bold;
     border: none;
     border-radius: 4px;
-    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .Login input[type="submit"]:hover {
-    background-color: #555;
+    background-color: #61afef;
+    color: #fff;
 }
