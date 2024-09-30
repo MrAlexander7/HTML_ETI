@@ -5,6 +5,7 @@
     <title>Unix_system</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" type="image/x-icon" href="/images/OIP%20(4).jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -14,6 +15,12 @@
         <a href="about.html">Про нас</a>
         <a href="contact.html">Контакти</a>
         <a href="login.html" style="float:right">Вхід</a>
+        <!-- Бургер-меню -->
+        <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
 </header>
 
@@ -24,6 +31,17 @@
         <h1>Ласкаво просимо на сайт Unix_system</h1>
         <p>Пориньте у світ UNIX систем разом з нами!</p>
     </div>
+</section>
+
+<!-- Каталог з Grid -->
+<section class="Catalog grid-section">
+    <h2>Системи</h2>
+    <ul>
+        <li><a href="https://manjaro.org/">Manjaro</a> <img src="images/OIP%20(1).jpg" alt="Manjaro"></li>
+        <li><a href="https://ubuntu.com/">Ubuntu</a> <img src="images/OIP%20(2).jpg" alt="Ubuntu"></li>
+        <li><a href="https://archlinux.org/">Arch Linux</a> <img src="images/OIP.jpg" alt="Arch Linux"></li>
+        <li><a href="https://www.debian.org/">Debian</a> <img src="images/OIP%20(3).jpg" alt="Debian"></li>
+    </ul>
 </section>
 
 <main>
@@ -37,19 +55,7 @@
 
         <h2>Поширення UNIX</h2>
         <p>У 1970-х роках UNIX почала активно розвиватися і поширюватися в університетських колах та наукових установах...</p>
-    </article>
 
-    <section class="Catalog">
-        <h2>Системи</h2>
-        <ul>
-            <li><a href="https://manjaro.org/">Manjaro</a> <img src="images/OIP%20(1).jpg" alt="Manjaro"></li>
-            <li><a href="https://ubuntu.com/">Ubuntu</a> <img src="images/OIP%20(2).jpg" alt="Ubuntu"></li>
-            <li><a href="https://archlinux.org/">Arch Linux</a> <img src="images/OIP.jpg" alt="Arch Linux"></li>
-            <li><a href="https://www.debian.org/">Debian</a> <img src="images/OIP%20(3).jpg" alt="Debian"></li>
-        </ul>
-    </section>
-
-    <article class="Main">
         <h2>UNIX у комерційному світі</h2>
         <p>У 1980-х роках UNIX стала популярною в комерційних проєктах...</p>
 
@@ -64,6 +70,15 @@
 <footer class="footer">
     <p>© 2021 Unix_system</p>
 </footer>
+
+<script>
+    // JavaScript для бургер-меню
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navbar = document.querySelector('.navbar');
+    burgerMenu.addEventListener('click', () => {
+        navbar.classList.toggle('open');
+    });
+</script>
 
 </body>
 </html>
