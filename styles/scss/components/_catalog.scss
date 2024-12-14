@@ -1,0 +1,25 @@
+
+@use '../base/variables' as v;
+
+.Catalog_grid-section h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.grid-section ul {
+  display: grid;
+  grid-template-columns: repeat(v.$column-count-large, 1fr);
+  gap: 20px;
+  list-style-type: none;
+  padding: 20px;
+}
+
+.two-columns {
+  column-count: v.$column-count-large;
+  column-gap: v.$column-gap;
+}
+
+.two-columns li {
+  break-inside: avoid;
+  margin-bottom: 10px;
+}

@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Unix_system</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../HTMLPage/styles/style.css">
     <link rel="icon" type="image/x-icon" href="/images/OIP%20(4).jpg">
+    <script src="../HTMLPage/scripts/script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../HTMLPage/scripts/fetch.js"></script>
 </head>
 <body>
 
@@ -34,13 +36,17 @@
 </section>
 
 <!-- Каталог з Grid -->
-<section class="Catalog grid-section">
+<section class="Catalog_grid-section">
     <h2>Системи</h2>
-    <ul>
+    <ul class="two-columns">
         <li><a href="https://manjaro.org/">Manjaro</a> <img src="images/OIP%20(1).jpg" alt="Manjaro"></li>
         <li><a href="https://ubuntu.com/">Ubuntu</a> <img src="images/OIP%20(2).jpg" alt="Ubuntu"></li>
         <li><a href="https://archlinux.org/">Arch Linux</a> <img src="images/OIP.jpg" alt="Arch Linux"></li>
         <li><a href="https://www.debian.org/">Debian</a> <img src="images/OIP%20(3).jpg" alt="Debian"></li>
+        <li><a href="#">Fedora</a> <img src="images/fedora.png" alt="Fedora"></li>
+        <li><a href="#">OpenSUSE</a> <img src="images/opensuse.jpg" alt="OpenSUSE"></li>
+        <li><a href="#">CentOS</a> <img src="images/centos.png" alt="CentOS"></li>
+        <li><a href="#">RedHat</a> <img src="images/redhat.jpg" alt="RedHat"></li>
     </ul>
 </section>
 
@@ -67,18 +73,29 @@
     </article>
 </main>
 
+<section class="control-panel">
+    <h2>Панель керування стилями</h2>
+    <button onclick="changeTextColor('red')">Змінити колір тексту на червоний</button>
+    <select id="font-size-selector" onchange="changeFontSize()">
+        <option value="16px">16px</option>
+        <option value="18px">18px</option>
+        <option value="20px">20px</option>
+    </select>
+    <input type="range" id="width-slider" min="300" max="800" value="600" onchange="changeWidth()">
+    <button onclick="toggleBackgroundColor()">Змінити колір фону</button>
+    <input type="text" id="custom-css" placeholder="Додайте власний CSS" oninput="applyCustomCSS()">
+</section>
+
+<!-- Блок для повітряної тривоги -->
+<section class="ip-section">
+    <h2>Ваша IP-адреса</h2>
+    <p id="ip-display">Завантаження IP-адреси...</p>
+</section>
+
+
 <footer class="footer">
     <p>© 2021 Unix_system</p>
 </footer>
-
-<script>
-    // JavaScript для бургер-меню
-    const burgerMenu = document.querySelector('.burger-menu');
-    const navbar = document.querySelector('.navbar');
-    burgerMenu.addEventListener('click', () => {
-        navbar.classList.toggle('open');
-    });
-</script>
 
 </body>
 </html>

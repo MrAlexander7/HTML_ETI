@@ -1,0 +1,42 @@
+
+@use '../base/variables' as v;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  background-color: v.$primary-color;
+  padding: v.$padding-base;
+  color: v.$white-color;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: v.$primary-color;
+  padding: v.$padding-base;
+}
+
+.navbar a {
+  color: v.$white-color;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger-menu span {
+  width: 25px;
+  height: 3px;
+  background-color: v.$white-color;
+  margin: 5px 0;
+}

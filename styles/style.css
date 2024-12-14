@@ -1,201 +1,137 @@
-/* Основні стилі */
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1b1b1b;
-    color: #eaeaea;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden; /* Прибирає горизонтальний скрол */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2 {
-    color: #eaeaea;
+  margin-bottom: 1rem;
 }
 
 p {
-    line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
-a {
-    color: #61afef;
-    text-decoration: none;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
-a:hover {
-    color: #98c379;
+header {
+  background-color: #333;
+  padding: 1rem;
+  color: #fff;
 }
 
-/* Навігація */
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #282c34;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 100;
-    overflow-x: hidden; /* Виправлення переповнення */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem;
 }
 
 .navbar a {
-    display: inline-block;
-    padding: 15px 20px;
-    color: #eaeaea;
-    font-weight: bold;
-    text-align: center;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
 }
 
-.navbar a:hover {
-    background-color: #98c379;
-    color: #1b1b1b;
-}
-
-/* Бургер-меню */
 .burger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 15px;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
 }
 
 .burger-menu span {
-    background-color: #eaeaea;
-    height: 4px;
-    margin: 4px 0;
-    width: 25px;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
 }
 
-/* Адаптивне бургер-меню */
-@media (max-width: 768px) {
-    .navbar a {
-        display: none;
-    }
-
-    .navbar.open a {
-        display: block;
-        background-color: #282c34;
-        padding: 10px;
-        text-align: center;
-        margin: 5px 0;
-    }
-
-    .burger-menu {
-        display: flex;
-    }
-}
-
-/* Основний контент */
-.Main {
-    padding: 100px 20px 40px 20px;
-    background-color: #1e1e1e;
-    max-width: 100%; /* Зміна на 100% ширини */
-    margin: auto;
-    flex: 1;
-    overflow-y: auto;
-    box-sizing: border-box; /* Забезпечує правильні відступи */
-}
-
-.Main h1 {
-    font-size: 36px;
-    text-align: center;
-}
-
-.Main p {
-    text-align: justify;
-    margin-bottom: 20px;
-}
-
-/* Каталог з Grid */
-.grid-section ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
-    list-style-type: none;
-    padding: 0;
-    width: 100%; /* Додано ширину 100% */
-    box-sizing: border-box; /* Виправлення переповнення */
-}
-
-.grid-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.grid-section ul li {
-    background-color: #333;
-    text-align: center;
-    border-radius: 3px;
-    transition: transform 0.3s ease;
-}
-
-.grid-section ul li:hover {
-    transform: scale(1.03);
-}
-
-.grid-section ul li img {
-    width: 80%;
-    height: auto;
-    border-radius: 2px;
-    margin-bottom: 5px;
-}
-
-/* Вітальний банер */
 .banner {
-    background-color: #282c34;
-    color: #61afef;
-    text-align: center;
-    padding: 60px 20px;
-    font-size: 24px;
-    margin-bottom: 40px;
-    border-bottom: 5px solid #98c379;
-    box-sizing: border-box;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  margin: 20px 0;
 }
 
-/* Футер */
+.banner-img {
+  width: 100%;
+  height: auto;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+.Catalog_grid-section h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.grid-section ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  list-style-type: none;
+  padding: 20px;
+}
+
+.two-columns {
+  column-count: 4;
+  column-gap: 15px;
+}
+
+.two-columns li {
+  break-inside: avoid;
+  margin-bottom: 10px;
+}
+
 .footer {
-    background-color: #282c34;
-    color: #eaeaea;
-    text-align: center;
-    padding: 10px;
-    margin-top: auto;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .navbar a {
+    display: none;
+  }
+  .burger-menu {
+    display: flex;
+  }
+  .navbar.open a {
+    display: block;
     width: 100%;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
-    position: relative;
-    bottom: 0;
-    box-sizing: border-box;
+    text-align: center;
+    background-color: #333;
+    padding: 1rem;
+    margin-top: 10px;
+  }
+  .grid-section ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .two-columns {
+    column-count: 2;
+  }
+}
+@media (max-width: 480px) {
+  .grid-section ul {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* Адаптивність */
-@media screen and (max-width: 768px) {
-    .Main h1 {
-        font-size: 28px;
-    }
-
-    .grid-section ul {
-        grid-template-columns: 1fr; /* Одна колонка на мобільних пристроях */
-    }
-
-    .navbar a {
-        padding: 10px;
-    }
-
-    .banner {
-        font-size: 20px;
-        padding: 40px 20px;
-    }
-
-    .grid-section ul li {
-        padding: 10px;
-        width: 100%;
-    }
-
-    .Main {
-        padding: 100px 10px 40px 10px; /* Менші відступи для мобільних */
-    }
-
-    .navbar {
-        padding: 10px;
-    }
-}
+/*# sourceMappingURL=style.css.map */

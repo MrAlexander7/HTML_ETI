@@ -1,0 +1,35 @@
+
+@use "../base/variables" as v;
+
+@media (max-width: 768px) {
+  .navbar a {
+    display: none;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  .navbar.open a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: v.$primary-color;
+    padding: v.$padding-base;
+    margin-top: 10px;
+  }
+
+  .grid-section ul {
+    grid-template-columns: repeat(v.$column-count-small, 1fr);
+  }
+
+    .two-columns {
+        column-count: v.$column-count-small;
+    }
+}
+
+@media (max-width: 480px) {
+  .grid-section ul {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,14 @@
+// Змінні
+@use 'base/variables';
+
+// Базові стилі
+@use 'base/typography';
+
+// Стилі компонентів
+@use 'components/header';
+@use 'components/banner';
+@use 'components/catalog';
+@use 'components/footer';
+
+// Адаптивні стилі
+@use 'components/media';

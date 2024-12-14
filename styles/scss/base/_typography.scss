@@ -1,0 +1,18 @@
+
+@use "variables" as v;
+
+body {
+  font-family: v.$font-family-base;
+  line-height: v.$line-height-base;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
